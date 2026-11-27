@@ -189,31 +189,29 @@
 
     /* PANEL FORM LOGIN */
 
-    .login-form-area {
-        padding: 55px 52px;
+    .brand-logo {
         display: flex;
-        flex-direction: column;
         justify-content: center;
-    }
-
-    .login-welcome-icon {
-        width: 52px;
-        height: 52px;
-        display: flex;
         align-items: center;
-        justify-content: center;
-        border-radius: 15px;
-        background: #eef2ff;
-        color: #4f46e5;
-        font-size: 23px;
-        margin-bottom: 22px;
+        width: 100%;
+        margin: 0 auto 5px;
     }
 
+    .logo-sttnf {
+        display: block;
+        width: 85px;
+        height: 85px;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    /* JUDUL LOGIN */
     .login-form-area h3 {
         color: #172554;
         font-size: 27px;
         font-weight: 800;
         margin-bottom: 8px;
+        text-align: center;
     }
 
     .login-subtitle {
@@ -221,8 +219,17 @@
         font-size: 13px;
         margin-bottom: 30px;
         line-height: 1.7;
+        text-align: center;
     }
 
+    .login-form-area {
+        padding: 55px 52px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    
     .login-form-area .form-label {
         display: block;
         color: #334155;
@@ -494,16 +501,20 @@
         {{-- PANEL FORM LOGIN --}}
         <div class="login-form-area">
 
-            <div class="login-welcome-icon">
-                <i class="bi bi-person-lock"></i>
-            </div>
+            <span class="brand-logo">
+                    <img
+                        src="https://assets.siakadcloud.com/uploads/sttnurulfikri/logoaplikasi/1405.jpg"
+                        alt="Logo STT-NF"
+                        class="logo-sttnf"
+                    >
+            </span>
 
-            <h3>Selamat Datang!</h3>
+                    <h3>Selamat Datang!</h3>
 
-            <p class="login-subtitle">
-                Masuk menggunakan akun admin atau akun mahasiswa
-                untuk mengakses sistem.
-            </p>
+                    <p class="login-subtitle">
+                        Masuk menggunakan akun admin atau akun mahasiswa
+                        untuk mengakses sistem.
+                    </p>
 
             {{-- PESAN SUKSES --}}
             @if(session('success'))
